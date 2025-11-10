@@ -70,18 +70,18 @@ export default function ScannerPage() {
               </ol>
             </div>
 
-            {/* QR Code Link */}
+            {/* Registration Link */}
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-purple-500/20 backdrop-blur-md">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <span className="text-2xl">🔗</span> QR Code URL
+                <span className="text-2xl">🔗</span> Registration Link
               </h3>
               <div className="bg-slate-900 p-4 rounded-lg border border-purple-500/30 mb-4">
                 <code className="text-sm text-purple-300 break-all">
-                  https://astraproduction.astragroups.org/register
+                  https://astraproductions.astragroups.org/register
                 </code>
               </div>
               <p className="text-sm text-gray-400">
-                Use this URL to generate your QR codes in the Python scanner
+                Live registration URL for event attendees
               </p>
             </div>
           </div>
