@@ -77,7 +77,7 @@ export default function ScannerPage() {
               </h3>
               <div className="bg-slate-900 p-4 rounded-lg border border-purple-500/30 mb-4">
                 <code className="text-sm text-purple-300 break-all">
-                  https://astraproductions.astragroups.org/register
+                  https://astraproductions.astragroups.org/registration
                 </code>
               </div>
               <p className="text-sm text-gray-400">
