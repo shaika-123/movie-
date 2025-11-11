@@ -13,14 +13,14 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8" style={{ fontFamily: "var(--font-poppins)" }}>
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Title */}
           <div className="mb-12 animate-fade-in">
-            <h1 className="text-7xl sm:text-8xl md:text-9xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-4">
+            <h1 className="text-7xl sm:text-8xl md:text-9xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-4" style={{ fontFamily: "var(--font-poppins)", letterSpacing: '-1px' }}>
               ASTRA
             </h1>
-            <p className="text-2xl sm:text-3xl text-purple-200 font-light tracking-widest">
+            <p className="text-2xl sm:text-3xl text-purple-200 font-light tracking-widest" style={{ fontFamily: "var(--font-inter)", marginTop: '6px' }}>
               MOVIE PRODUCTION
             </p>
           </div>
@@ -30,12 +30,14 @@ export default function Hero() {
             <Link
               href="/registration"
               className="px-10 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
+              style={{ fontFamily: "var(--font-poppins)" }}
             >
               Register
             </Link>
             <Link
               href="/scanner"
               className="px-10 py-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
+              style={{ fontFamily: "var(--font-poppins)" }}
             >
               Claim Scanner
             </Link>
