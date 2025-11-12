@@ -1,4 +1,5 @@
 import { supabaseServer } from '@/lib/supabase';
+import { generateTicketId, formatTicketDateTime } from '@/lib/ticket';
 import { NextRequest, NextResponse } from 'next/server';
 
 interface FormData {
@@ -36,6 +37,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Generate unique ticket ID
+    const ticketId = generateTicketId();
+    
+    // Get current timestamp
+    const now = new Date();
+    const { date, time } = formatTicketDateTime(now.toISOString());
+
     // Insert into Supabase
     const { data, error } = await supabaseServer
       .from('registrations')
@@ -60,6 +68,14 @@ export async function POST(request: NextRequest) {
       {
         success: true,
         message: 'Registration submitted successfully',
+        ticket: {
+          id: ticketId,
+          name: body.name,
+          age: age,
+          date: date,
+          time: time,
+          registeredAt: now.toISOString(),
+        },
         data: data,
       },
       { status: 201 }
