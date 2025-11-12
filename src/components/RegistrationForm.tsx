@@ -51,7 +51,9 @@ export default function RegistrationForm() {
       });
 
       if (!response.ok) {
-        throw new Error('Registration failed');
+        // Get the actual error message from the server
+        const errorData = await response.json();
+        throw new Error(errorData.message || `HTTP ${response.status}: Registration failed`);
       }
 
       const result = await response.json();
@@ -68,7 +70,7 @@ export default function RegistrationForm() {
       setTimeout(() => setSubmitted(false), 5000);
     } catch (error) {
       console.error('Error submitting registration:', error);
-      alert('Error submitting registration. Please try again.');
+      alert(`Error submitting registration: ${error instanceof Error ? error.message : 'Unknown error'}. Please try again.`);
     } finally {
       setLoading(false);
     }
